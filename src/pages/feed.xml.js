@@ -4,8 +4,8 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const blog = await getCollection('blog');
   return rss({
-    title: 'Brutal Blog',
-    description: 'Brutal is a theme for Astro',
+    title: 'Belajar Dev',
+    description: 'Platform ini menyediakan akses gratis untuk belajar pemrograman dari para ahli.',
     stylesheet: false,
     site: context.site,
     items: blog.map((post) => ({
