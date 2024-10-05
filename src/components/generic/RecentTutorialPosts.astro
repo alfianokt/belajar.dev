@@ -1,8 +1,7 @@
 ---
+import TutorialList from '@components/tutorial/TutorialList.astro';
+import { Button, Card } from '@eliancodes/brutal-ui';
 import { getCollection } from 'astro:content';
-import BlogList from '../blog/BlogList.astro';
-import { Card } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
 
 interface Props {
   count?: number;
@@ -10,7 +9,7 @@ interface Props {
 
 const { count } = Astro.props;
 
-const posts = await getCollection('blog').then((posts) =>
+const posts = await getCollection('tutorial').then((posts) =>
   posts.reverse().slice(0, count ?? 3)
 );
 ---
@@ -22,12 +21,12 @@ const posts = await getCollection('blog').then((posts) =>
         Tutorial Terbaru
       </h2>
       <div class='hidden md:block'>
-        <Button href='/tutorial/'>Go to blog &rarr;</Button>
+        <Button href='/tutorial/'>Go to tutorial &rarr;</Button>
       </div>
       <div class='block md:hidden'>
-        <Button href='/tutorial/'>to blog</Button>
+        <Button href='/tutorial/'>to tutorial</Button>
       </div>
     </div>
-    <BlogList posts={posts} />
+    <TutorialList posts={posts} />
   </Card>
 </section>

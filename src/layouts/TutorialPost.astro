@@ -1,0 +1,27 @@
+---
+import TutorialContent from '@components/tutorial/TutorialContent.astro';
+import TutorialSideBar from '@components/tutorial/TutorialSideBar.astro';
+import RecentTutorialPosts from '@components/generic/RecentTutorialPosts.astro';
+import Layout from './Default.astro';
+
+const ogImage = new URL(`/v1/generate/og/${Astro.params.slug}.png`, Astro.url);
+
+const { content, headings } = Astro.props;
+const { title, description } = content;
+---
+
+<Layout
+  title={title as string}
+  description={description as string}
+  ogImage={ogImage}
+>
+  <main class='p-6 lg:grid lg:grid-cols-3 flex justify-center'>
+    <TutorialSideBar headings={headings} />
+    <TutorialContent content={content}>
+      <slot />
+    </TutorialContent>
+  </main>
+  <section class='p-6'>
+    <RecentTutorialPosts count={6} />
+  </section>
+</Layout>

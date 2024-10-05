@@ -1,0 +1,19 @@
+---
+import TutorialList from '@components/tutorial/TutorialList.astro';
+import Layout from '@layouts/Default.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('tutorial').then((collection) =>
+  collection.reverse()
+);
+---
+
+<Layout
+  title='Blog'
+  description='Brutal Blog | On this page you can find a collection of blogposts'
+  pageTitle='Brutal Blog'
+>
+  <main class='bg-green p-6'>
+    <TutorialList posts={posts} />
+  </main>
+</Layout>

@@ -1,14 +1,14 @@
 ---
-title: Blogpost 2
-pubDate: 12/31/2022 12:05
-author: "Elian Van Cutsem"
+title: Tutorialpost 4
+author: Elian Van Cutsem
+pubDate: 2023-02-15 12:00
 tags:
   - Astro
-  - WebDev
-  - Programming
-imgUrl: '../../assets/astro.jpeg'
+  - JavaScript
+  - Web Development
 description: Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, vox nocte sedesque, decimo. Omnia esse, quam sive; conplevit illis indestrictus admovit dedit sub quod protectus, impedit non.
-layout: '../../layouts/BlogPost.astro'
+imgUrl: '../../assets/astro.jpeg'
+layout: "../../layouts/TutorialPost.astro"
 ---
 
 ## Deorum petiit ignis

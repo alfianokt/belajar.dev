@@ -1,10 +1,8 @@
 ---
-import Layout from '@layouts/Default.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+import RecentTutorialPosts from '@components/generic/RecentTutorialPosts.astro';
 import MobileSocials from '@components/home/MobileSocials.astro';
-import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
+import { Button, Card, Pill } from '@eliancodes/brutal-ui';
+import Layout from '@layouts/Default.astro';
 
 const builtWith = [
   { name: 'Astro', url: 'https://astro.build/' },
@@ -92,6 +90,6 @@ const builtWith = [
         </Card>
       </div>
     </section>
-    <RecentBlogPosts />
+    <RecentTutorialPosts />
   </main>
 </Layout>
